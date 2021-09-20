@@ -1,0 +1,9 @@
+{
+  "name": "desafio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "googleapis": "^87.0.0"
+  }
+}
