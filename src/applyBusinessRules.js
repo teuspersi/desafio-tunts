@@ -13,24 +13,24 @@ async function applyBusinessRules() {
     const absences = parseInt(student["Faltas"]);
     const absencesLimit = parseInt(totalSemesterLessons) * 0.25;
 
-    const media = parseFloat(((grade1 + grade2 + grade3) / 3).toFixed(2));
+    const average = parseFloat(((grade1 + grade2 + grade3) / 3).toFixed(2));
 
     if (absences > absencesLimit) {
       student["Situação"] = "Reprovado por Falta";
       return;
     }
 
-    if (media > 70) {
+    if (average > 70) {
       student["Situação"] = "Aprovado";
       return;
     }
 
-    if (media < 50) {
+    if (average < 50) {
       student["Situação"] = "Reprovado por Nota";
       return;
     }
 
-    if (50 <= media < 70) {
+    if (50 <= average < 70) {
       student["Situação"] = "Exame Final";
       return;
     }
@@ -42,10 +42,10 @@ async function applyBusinessRules() {
     const grade2 = parseInt(student["P2"]);
     const grade3 = parseInt(student["P3"]);
 
-    const media = (grade1 + grade2 + grade3) / 3;
+    const average = (grade1 + grade2 + grade3) / 3;
 
     if (student["Situação"] === "Exame Final") {
-      student["Nota para Aprovação Final"] = 100 - media;
+      student["Nota para Aprovação Final"] = 100 - average;
     } else {
       student["Nota para Aprovação Final"] = 0;
     }
