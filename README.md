@@ -8,7 +8,7 @@ Desafio de programação do processo seletivo para estágio da Tunts. O desafio 
 - Acesse o diretório da aplicação através do terminal;
 - Recomendo que esteja com a [planilha](https://docs.google.com/spreadsheets/d/1V28aRL4tmisJRIET7mMaAbAR1MDg9DN6_neOoW-iThE/edit#gid=0) aberta para ver as modificações em tempo real.
 - Rode o comando: `npm i` ou `npm install` para instalar as dependências. (É necessário ter o node instalado na sua máquina);
-- Rode a aplicação através do comando `node src/index.js`
+- Rode a aplicação através do comando `node src/index.js` (é importante que você esteja na raiz do projeto, fora da pasta src).
 
 # Observações
 
